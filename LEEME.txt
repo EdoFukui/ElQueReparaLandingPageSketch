@@ -1,0 +1,46 @@
+EL QUE REPARA · SITIO (BORRADOR DE DISEÑO)
+==========================================
+
+Abre index.html en el navegador para verlo. Es un borrador: todavía no está listo
+para publicarse. Esta lista dice qué falta, en orden.
+
+Qué incluye
+-----------
+index.html            El sitio (textos, estilos y comportamiento en un solo archivo).
+404.html              Página para enlaces que no existen.
+favicon.ico, favicon-32.png, apple-touch-icon.png, icon-192.png, icon-512.png
+                      Íconos de pestaña, celular y atajo. Salen de la foto de la tarjeta del negocio.
+og-image.jpg          Imagen que se ve al compartir el enlace (WhatsApp, redes). 1200x630.
+logo.png              Logo usado en datos estructurados y en la 404 (baja resolución).
+robots.txt, sitemap.xml, site.webmanifest
+fonts/                Tipografías propias (Figtree y Lexend). Licencia SIL OFL en fonts/licencias/.
+
+Antes de publicar
+-----------------
+1. DOMINIO. Se usó https://www.elquerepara.cl como dominio previsto, pero no está confirmado
+   (verificar disponibilidad en nic.cl). Si es otro, reemplazarlo en TODOS estos archivos:
+   index.html (canonical, og:url, og:image y datos estructurados), robots.txt y sitemap.xml.
+2. NOINDEX. index.html trae <meta name="robots" content="noindex, nofollow"> para que Google no
+   indexe el borrador. Al publicar, borrar esa línea (está marcada con un comentario).
+3. CORREO. Aparece contacto@elquerepara.com (sección Ubicación y datos estructurados). Viene de
+   la ficha de Facebook y NO está confirmado. Confirmarlo con el dueño o quitarlo.
+4. LOGO E ÍCONOS. Si el dueño tiene el logo original en alta resolución, reemplazar logo.png,
+   favicon.ico, favicon-32.png, apple-touch-icon.png, icon-192.png, icon-512.png y og-image.jpg
+   (mismos nombres). Los actuales vienen de una foto, por eso no son nítidos al ampliarlos.
+5. SUBIR todo el contenido de esta carpeta a la RAÍZ del dominio, con la misma estructura. Los
+   hostings estáticos habituales (GitHub Pages, Netlify, Cloudflare Pages) usan 404.html solos.
+   La 404 usa rutas desde la raíz (/fonts/...): si la abres como archivo local, se ve con
+   tipografía de respaldo. Es normal.
+6. Una vez publicado, probar el enlace en WhatsApp para ver la vista previa. Si no aparece al
+   primer intento, suele ser caché de la aplicación.
+
+Pendiente que no se resuelve solo con archivos
+----------------------------------------------
+- RESEÑAS EN VIVO. Hoy la sección muestra 4,8 y 413 opiniones con un botón a Google. Estas cifras
+  son estáticas: se tomaron de Google el 14-nov-2026 y hay que actualizarlas a mano de vez en cuando.
+  Mostrar el texto de las reseñas requiere una de estas vías: la API de Google Places (clave y
+  facturación, máximo 5 reseñas), un widget de terceros, o acceso del dueño a su perfil de Google.
+  El arreglo REVIEWS del script está vacío y listo para conectarlo.
+- AVISO DE PRIVACIDAD. No se redactó. Depende de qué recoja el sitio (hoy no tiene formularios ni
+  analítica, pero el mapa de Google sí carga recursos de Google). Conviene criterio legal.
+- Tiempos de reparación, garantía y cobertura: no se incluyen en el sitio porque no están confirmados.
