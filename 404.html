@@ -6,12 +6,17 @@
 <title>Página no encontrada | El Que Repara</title>
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#050805">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- Esta página se sirve desde cualquier ruta inexistente, así que las rutas relativas necesitan una base.
+     En la URL de proyecto de GitHub Pages (/ElQueReparaLandingPageSketch/) la base es esa carpeta; con
+     dominio propio o sin JavaScript, la base es la raíz. El primer <base> del documento es el que vale. -->
+<script>var m=/^\/ElQueReparaLandingPageSketch\//i.exec(location.pathname);if(m)document.write('<base href="'+m[0]+'">')</script>
+<base href="/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
-@font-face{font-family:"Lexend";font-weight:700;font-display:swap;src:url(/fonts/lexend-latin-700-normal.woff2) format("woff2")}
-@font-face{font-family:"Figtree";font-weight:400;font-display:swap;src:url(/fonts/figtree-latin-400-normal.woff2) format("woff2")}
-@font-face{font-family:"Figtree";font-weight:700;font-display:swap;src:url(/fonts/figtree-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Lexend";font-weight:700;font-display:swap;src:url(fonts/lexend-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Figtree";font-weight:400;font-display:swap;src:url(fonts/figtree-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Figtree";font-weight:700;font-display:swap;src:url(fonts/figtree-latin-700-normal.woff2) format("woff2")}
 :root{--bg:#050805;--tx:#e8f1e9;--mu:#a3b5a5;--g:#3ddc57;--gt:#04100a;--line:#1f2d1f;color-scheme:dark}
 *{box-sizing:border-box;margin:0}
 body{min-height:100svh;display:grid;place-items:center;padding:2rem 1.25rem;background:var(--bg);color:var(--tx);font-family:"Figtree",system-ui,sans-serif;line-height:1.55;text-align:center}
@@ -33,7 +38,7 @@ p{color:var(--mu)}
 <div class="c" aria-hidden="true">404</div>
 <h1>No encontramos esa página</h1>
 <p>Puede que el enlace esté mal escrito o que la página ya no exista.</p>
-<div class="row"><a class="btn p" href="/">Volver al inicio</a><a class="btn s" href="https://wa.me/56936754413?text=Hola%2C%20quiero%20agendar%20la%20reparaci%C3%B3n%20de%20mi%20celular." target="_blank" rel="noopener">Escríbenos por WhatsApp</a></div>
+<div class="row"><a class="btn p" href="./">Volver al inicio</a><a class="btn s" href="https://wa.me/56936754413?text=Hola%2C%20quiero%20agendar%20la%20reparaci%C3%B3n%20de%20mi%20celular." target="_blank" rel="noopener">Escríbenos por WhatsApp</a></div>
 </main>
 </body>
 </html>
